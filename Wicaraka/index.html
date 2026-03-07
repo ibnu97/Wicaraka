@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wicaraka</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="instansi-info">
+                <img src="https://i.ibb.co.com/qY4R6RC9/logo-1.png" alt="Logo Sekolah" class="logo"> 
+                <span>SMA NEGERI 1 SULANG</span>
+            </div>
+            <hr>
+            <h1>🗣️ Wicaraka</h1>
+            <p>Inovasi Terapi Wicara Digital oleh <strong>[Ibnu Azida]</strong></p>
+        </header>
+
+        <section class="modul-section">
+            <h3>📚 Modul Latihan</h3>
+            <div class="modul-links">
+                <a href="#" class="btn-modul">1. Pemanasan</a>
+                <a href="#" class="btn-modul">2. Artikulasi Dasar</a>
+                <a href="#" class="btn-modul">3. Kosa Kata Harian</a>
+            </div>
+        </section>
+
+        <main class="exercise-section">
+            <div class="level-indicator">
+                <label for="level-select">Pilih Level:</label>
+                <select id="level-select" onchange="changeLevel()">
+                    <option value="1">Level 1: Isolasi Bunyi</option>
+                    <option value="2">Level 2: Suku Kata</option>
+                    <option value="3">Level 3: Kata</option>
+                    <option value="4">Level 4: Frasa & Kalimat</option>
+                    <option value="5">Level 5: Konversi</option>
+                </select>
+            </div>
+
+            <div class="practice-card">
+                <div class="flashcard-container">
+                    <img id="target-img" src="" alt="Ilustrasi" style="display: none; width: 180px; margin: 0 auto 15px auto; border-radius: 15px; border: 3px solid #eee;">
+                    <h2 id="target-text">A</h2>
+                </div>
+                
+                <p id="instruction">Ucapkan bunyi di atas dengan jelas</p>
+                <button id="start-btn">🎤 Mulai Bicara</button>
+                
+                <div class="feedback-box">
+                    <p id="result-label">Hasil: <span id="user-speech">-</span></p>
+                    <p id="score-label">Skor: <span id="score">0</span>%</p>
+                </div>
+            </div>
+        </main>
+
+        <section class="progress-section">
+            <h3>📈 Laporan Progres</h3>
+            <div id="progress-bar-container" style="background: #ddd; border-radius: 10px; height: 10px; width: 100%; margin-bottom: 10px;">
+                <div id="progress-bar" style="background: #27ae60; height: 100%; width: 0%; border-radius: 10px; transition: 0.5s;"></div>
+            </div>
+            <p id="progress-text">Belum ada latihan yang diselesaikan hari ini.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="dev-info">
+            <p>© 2026 - Dikembangkan untuk Lomba Krenova</p>
+            <small>Bidang Inovasi: Pendidikan & Kesehatan</small>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

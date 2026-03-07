@@ -1,0 +1,132 @@
+body::before {
+    content: "";
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 100px;
+    background-image: url('images/ilustrasi-hewan-ceris.png');
+    background-size: contain;
+    opacity: 0.3; /* Samar agar tidak mengganggu */
+}
+
+.practice-card {
+    background: #fdfdfd;
+    border: 4px solid #ffcc00; /* Warna kuning ceria */
+    border-radius: 30px;
+    transition: transform 0.3s;
+}
+.practice-card:hover {
+    transform: scale(1.02); /* Sedikit membesar saat mouse lewat */
+}
+
+.container { 
+    max-width: 600px; 
+    margin: auto; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 20px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+}
+header { 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+h1 { 
+    color: #2c3e50; 
+    margin-bottom: 5px; 
+}
+
+.modul-links { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 30px; 
+    flex-wrap: wrap; 
+}
+.btn-modul { 
+    flex: 1; 
+    padding: 10px; 
+    background: #3498db; 
+    color: white; 
+    text-decoration: none; 
+    text-align: center; 
+    border-radius: 8px; 
+    font-size: 14px; 
+}
+
+.practice-card { 
+    border: 2px solid #3498db; 
+    border-radius: 15px; 
+    padding: 40px; 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+#target-text { 
+    font-size: 64px; 
+    margin: 0; 
+    color: #2980b9; 
+}
+#start-btn { 
+    background: #27ae60; 
+    color: white; 
+    border: none; 
+    padding: 15px 30px; 
+    font-size: 18px; 
+    border-radius: 50px; 
+    cursor: pointer; 
+    margin-top: 20px; 
+    transition: 0.3s; 
+}
+#start-btn:hover { 
+    background: #2ecc71; 
+    transform: scale(1.05); 
+}
+
+.progress-section { 
+    border-top: 1px solid #ddd; 
+    padding-top: 20px; 
+}
+#user-speech { 
+    font-weight: bold; 
+    color: #e67e22; 
+}
+#score { 
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #27ae60; 
+}
+.instansi-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+#target-text {
+    color: #2c3e50; /* Ganti dengan warna cerah */
+    background: linear-gradient(to right, #3498db, #e74c3c, #27ae60); /* Warna gradasi pelangi */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo {
+    width: 40px; /* Sesuaikan ukuran logo sekolah */
+    height: auto;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #bdc3c7;
+    border-top: 1px dashed #ddd;
+    padding-top: 20px;
+}
+
+strong {
+    color: #2980b9;
+}
