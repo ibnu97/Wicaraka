@@ -54,6 +54,209 @@ h1 {
     font-size: 14px; 
 }
 
+:root {
+    --primary-color: #5856d6; /* Biru Ungu khas Speech Blubs */
+    --success-color: #4cd964; /* Hijau cerah */
+    --warning-color: #ff9500; /* Oranye */
+    --bg-color: #f2f2f7;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Rounded Mplus 1c', 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: #1c1c1e;
+    margin: 0;
+    padding: 15px;
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 40px; /* Sangat bulat agar ramah anak */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+/* Header Styling */
+header h1 {
+    font-size: 28px;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+/* Button Modul ala Speech Blubs */
+.modul-links {
+    display: flex;
+    flex-direction: column; /* Vertikal seperti referensi */
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.btn-modul {
+    padding: 18px;
+    border: 2px solid var(--primary-color);
+    border-radius: 25px;
+    background: white;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-modul:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Practice Card Styling */
+.practice-card {
+    background: white;
+    border: 3px solid #e5e5ea;
+    border-radius: 35px;
+    padding: 30px;
+    text-align: center;
+    margin: 25px 0;
+}
+
+#target-text {
+    font-size: 80px;
+    color: #ff3b30; /* Merah cerah untuk teks target */
+    margin: 10px 0;
+}
+
+/* Tombol Mulai Bicara yang Besar */
+#start-btn {
+    width: 100%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 0 #403eb5; /* Efek tombol 3D */
+    margin-bottom: 15px;
+}
+
+#start-btn:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #403eb5;
+}
+
+/* Progress Bar Bulat */
+#progress-bar-container {
+    background: #e5e5ea;
+    height: 12px;
+    border-radius: 20px;
+}
+
+/* Navigasi Bawah Playful */
+.bottom-nav {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 450px;
+    background: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 10px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(88, 86, 214, 0.2);
+    border: 2px solid #e5e5ea;
+    z-index: 1000;
+}
+
+.nav-item {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 1;
+}
+
+.nav-item .icon {
+    font-size: 24px;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.nav-item .label {
+    font-size: 10px;
+    font-weight: 800;
+    color: #8e8e93;
+    text-transform: uppercase;
+}
+
+.nav-item:hover .icon {
+    transform: scale(1.2);
+}
+
+.nav-item:active .icon {
+    transform: scale(0.9);
+}
+
+/* Berikan ruang di bawah container agar tidak tertutup nav */
+.container {
+    margin-bottom: 120px !important;
+}
+
+.custom-select {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    background-color: #fff;
+    border: 3px solid #e5e5ea;
+    border-radius: 20px; /* Sangat bulat agar ramah anak */
+    appearance: none; /* Menghilangkan panah default browser */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%235856d6' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+.custom-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(88, 86, 214, 0.2);
+}
+
+.custom-select option {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.btn-speaker {
+    background-color: #ff9500; /* Warna Oranye agar menonjol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 0 #cc7a00;
+    transition: 0.2s;
+}
+
+.btn-speaker:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #cc7a00;
+}
+
 .practice-card { 
     border: 2px solid #3498db; 
     border-radius: 15px; 
