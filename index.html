@@ -15,42 +15,43 @@
             </div>
             <hr>
             <h1>🗣️ Wicaraka</h1>
-            <p>Inovasi Terapi Wicara Digital oleh <strong>[Ibnu Azida]</strong></p>
+            <p>Inovasi Terapi Wicara Digital oleh <strong>[vincitore]</strong></p>
         </header>
 
-        <section class="modul-section">
-            <h3>📚 Modul Latihan</h3>
-            <div class="modul-links">
-                <a href="#" class="btn-modul">1. Pemanasan</a>
-                <a href="#" class="btn-modul">2. Artikulasi Dasar</a>
-                <a href="#" class="btn-modul">3. Kosa Kata Harian</a>
-            </div>
-        </section>
-
         <main class="exercise-section">
+            <div class="maskot-talk" style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+                <img src="https://cdn-icons-png.flaticon.com/512/3069/3069172.png" style="width: 80px;" alt="Maskot">
+                <div style="background: white; padding: 15px; border-radius: 20px; border: 2px solid #eee; position: relative;">
+                    <p id="instruction" style="margin: 0; font-weight: bold;">Ayo ikuti suara ini!</p>
+                </div>
+            </div>
+
             <div class="level-indicator">
-                <label for="level-select">Pilih Level:</label>
-                <select id="level-select" onchange="changeLevel()">
-                    <option value="1">Level 1: Isolasi Bunyi</option>
-                    <option value="2">Level 2: Suku Kata</option>
-                    <option value="3">Level 3: Kata</option>
-                    <option value="4">Level 4: Frasa & Kalimat</option>
-                    <option value="5">Level 5: Konversi</option>
+                <label for="level-select" style="display: block; margin-bottom: 8px; font-weight: 800; color: var(--primary-color);">PILIH TANTANGAN:</label>
+                <select id="level-select" onchange="changeLevel()" class="custom-select">
+                    <option value="1">🎯 Level 1: Isolasi Bunyi</option>
+                    <option value="2">🧩 Level 2: Suku Kata</option>
+                    <option value="3">🖼️ Level 3: Kata</option>
+                    <option value="4">💬 Level 4: Frasa & Kalimat</option>
+                    <option value="5">🔄 Level 5: Konversi</option>
                 </select>
             </div>
 
             <div class="practice-card">
                 <div class="flashcard-container">
-                    <img id="target-img" src="" alt="Ilustrasi" style="display: none; width: 180px; margin: 0 auto 15px auto; border-radius: 15px; border: 3px solid #eee;">
+                    <img id="target-img" src="" style="display: none; width: 200px; border-radius: 25px; margin-bottom: 10px;">
                     <h2 id="target-text">A</h2>
+                    
+                    <button id="play-audio-btn" class="btn-speaker" title="Dengarkan Contoh">
+                        🔊 Dengarkan Contoh
+                    </button>
                 </div>
                 
-                <p id="instruction">Ucapkan bunyi di atas dengan jelas</p>
-                <button id="start-btn">🎤 Mulai Bicara</button>
+                <button id="start-btn">LANJUTKAN</button> 
                 
-                <div class="feedback-box">
-                    <p id="result-label">Hasil: <span id="user-speech">-</span></p>
-                    <p id="score-label">Skor: <span id="score">0</span>%</p>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; margin-top: 15px;">
+                    <span>Hasil: <span id="user-speech" style="color: var(--warning-color);">-</span></span>
+                    <span>Skor: <span id="score" style="color: var(--success-color);">0</span>%</span>
                 </div>
             </div>
         </main>
@@ -63,6 +64,21 @@
             <p id="progress-text">Belum ada latihan yang diselesaikan hari ini.</p>
         </section>
     </div>
+
+    <nav class="bottom-nav">
+        <button class="nav-item" onclick="openModul('pemanasan')">
+            <span class="icon">🧘</span>
+            <span class="label">Pemanasan</span>
+        </button>
+        <button class="nav-item" onclick="openModul('artikulasi')">
+            <span class="icon">👅</span>
+            <span class="label">Artikulasi</span>
+        </button>
+        <button class="nav-item" onclick="openModul('kosakata')">
+            <span class="icon">🍎</span>
+            <span class="label">Kosakata</span>
+        </button>
+    </nav>
 
     <footer>
         <div class="dev-info">
